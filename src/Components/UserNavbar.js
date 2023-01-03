@@ -20,7 +20,7 @@ const UserNavbar = () => {
           <div><i className="fa fa-shopping-cart fa-xl" aria-hidden="true"></i></div>
           <span className='cart-count bg-primary text-white text-center rounded-circle position-absolute'>{cartCount}</span>
           </Link>
-          <Link className="btn btn-primary ms-5" to='/'>Login</Link>
+          <Link className="btn btn-primary ms-5" to='/admin'>Login</Link>
           </div>
         </Container>
       </Navbar>

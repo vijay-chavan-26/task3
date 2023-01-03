@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Button, Col, Container, Row, Table } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import CartProductCard from "../Components/CartProductCard";
 import UserNavbar from "../Components/UserNavbar";
 
@@ -62,13 +63,13 @@ const CartPage = () => {
                 <span className="total-price">₹{totalPrice+shipping}</span>
               </div>
             </div>
-            <Button
-              variant="dark"
-              className="position-absolute py-1 px-4"
+            <Link
+              className="btn btn-dark position-absolute py-1 px-4"
+              to={"/error"}
               style={{ bottom: "5%", left: "25%" }}
             >
               CHECKOUT
-            </Button>
+            </Link>
           </Col>
         </Row>
       </Container>
