@@ -6,12 +6,13 @@ import {
   handleAddProduct,
   incrementIdOfProduct,
 } from "../Actions/AdminDashboardActions";
+import { DEFAULT_IMAGE } from "../Components/Constants";
 import "../css/AdminLoginForm.css";
 
 const AddProductPage = () => {
   const [text, setText] = useState({
     Product_Id: "",
-    Product_Img: "",
+    Product_Img: DEFAULT_IMAGE,
     Product_Name: "",
     Product_Category: "",
     Product_Desc: "",
@@ -126,6 +127,7 @@ const AddProductPage = () => {
 
                 reader.onload = () => {
                   const url = reader.result;
+                  console.log(url)
                   setText({
                     ...text,
                     [e.target.name]: url,
@@ -145,7 +147,6 @@ const AddProductPage = () => {
               onClick={(e) => {
                 e.preventDefault();
                 if (
-                  text.Product_Img === "" ||
                   text.Product_Name.trim() === "" ||
                   text.Product_Category === "" ||
                   text.Product_Desc.trim() === "" ||
@@ -156,6 +157,8 @@ const AddProductPage = () => {
                   return;
                 }
 
+                dispatch(incrementIdOfProduct());
+                dispatch(handleAddProduct(text));
                 setText({
                   Product_Name: "",
                   Product_Category: "",
@@ -163,8 +166,6 @@ const AddProductPage = () => {
                   Product_Price: "",
                   Product_Qty: "",
                 });
-                dispatch(incrementIdOfProduct());
-                dispatch(handleAddProduct(text));
                 navigate("/admin");
               }}
             >

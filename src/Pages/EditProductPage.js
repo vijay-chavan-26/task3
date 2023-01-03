@@ -151,6 +151,8 @@ const EditProductPage = () => {
                   return;
                 }
 
+                console.log(text)
+                dispatch(handleUpdateProduct(text.Product_Id, text));
                 setText({
                   Product_Name: "",
                   Product_Category: "",
@@ -158,8 +160,6 @@ const EditProductPage = () => {
                   Product_Price: "",
                   Product_Qty: "",
                 });
-                console.log(text)
-                dispatch(handleUpdateProduct(text.Product_Id, text));
                 navigate("/admin");
               }}
             >
