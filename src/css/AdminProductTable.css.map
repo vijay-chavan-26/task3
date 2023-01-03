@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,MAAM,EAAE,SAAS,EAAE,KAAK;EACpB,AAAA,UAAU,CAAA;IACN,UAAU,EAAE,MAAM;GAErB",
+    "sources": [
+        "AdminProductTable.scss"
+    ],
+    "names": [],
+    "file": "AdminProductTable.css"
+}

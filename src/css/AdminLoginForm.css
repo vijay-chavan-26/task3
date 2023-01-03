@@ -1,0 +1,35 @@
+.buttons {
+  text-align: right;
+}
+
+@media (min-width: 768px) {
+  #login-box {
+    max-width: 70%;
+  }
+  .rounded-bottom-4 {
+    border-radius: 0 0 1rem 1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  #login-box {
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 576px) {
+  #login-box #form-box {
+    margin: 0 auto;
+    width: 80%;
+  }
+}
+
+@media (max-width: 576px) {
+  #login-box {
+    max-width: 90%;
+  }
+  #login-box .form-control {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=AdminLoginForm.css.map */
